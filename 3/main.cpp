@@ -18,7 +18,7 @@
 using namespace std;
 
 int getPositiveInteger(const string& prompt) {
-    int value;
+    int value = 0;
     while (true) {
         cout << prompt;
         cin >> value;
@@ -35,7 +35,7 @@ int getPositiveInteger(const string& prompt) {
 }
 
 int getInteger(const string& prompt) {
-    int value;
+    int value = 0;
     while (true) {
         cout << prompt;
         cin >> value;
