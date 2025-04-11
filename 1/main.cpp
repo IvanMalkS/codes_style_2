@@ -23,7 +23,7 @@
 using namespace std;
 
 int getPositiveInteger(const char* prompt) {
-    int value;
+    int value = 0;
     while (true) {
         cout << prompt;
         cin >> value;
@@ -40,7 +40,7 @@ int getPositiveInteger(const char* prompt) {
 }
 
 int getInteger(const char* prompt) {
-    int value;
+    int value = 0;
     while (true) {
         cout << prompt;
         cin >> value;
@@ -59,7 +59,7 @@ int getInteger(const char* prompt) {
 int main() {
     setlocale(LC_ALL, "Russian");
 
-    Stack stack;
+    Stack stack = nullptr;
     try {
         int n = getPositiveInteger("Введите количество элементов стека: ");
 
