@@ -59,7 +59,7 @@ void FillContainer(Deque& container, int size) {
                 cerr << "Не удалось открыть файл\n";
                 return;
             }
-            for (int i = 0; i < size && file >> value; i++) {
+            for (int i = 0; i < size && file >> value; ++i) {
                 container.pushBack(value);
             }
             const int containerSize = container.getSize();
