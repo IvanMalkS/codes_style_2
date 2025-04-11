@@ -14,27 +14,27 @@
 #define LIST_H
 
 class LinkedList {
-private:
-    struct Node {
-        int data;
-        Node* next;
-        Node(int value) : data(value), next(nullptr) {}
+    private:
+        struct Node {
+            int data;
+            Node* next;
+            Node(int value) : data(value), next(nullptr) {}
+        };
+    
+        Node* head;
+        Node* tail;
+
+    public:
+        LinkedList();
+        ~LinkedList();
+    
+        void append(int value);
+        void insertBeforeEverySecond(int M);
+        void display() const;
+        void* getLastNodeAddress() const;  // Изменили возвращаемый тип
+        int getLastNodeValue() const;      // Добавили метод для значения
+        void clear();
+        bool isEmpty() const;
     };
-
-    Node* head;
-    Node* tail;
-
-public:
-    LinkedList();
-    ~LinkedList();
-
-    void append(int value);
-    void insertBeforeEverySecond(int M);
-    void display() const;
-    void* getLastNodeAddress() const;  // Изменили возвращаемый тип
-    int getLastNodeValue() const;      // Добавили метод для значения
-    void clear();
-    bool isEmpty() const;
-};
 
 #endif // LIST_H
