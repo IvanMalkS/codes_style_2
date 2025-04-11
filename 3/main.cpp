@@ -52,7 +52,7 @@ int getInteger(const string& prompt) {
 }
 
 int main() {
-    LinkedList list;
+    LinkedList list = nullptr;
 
     try {
         int n = getPositiveInteger("Введите количество элементов в списке: ");
