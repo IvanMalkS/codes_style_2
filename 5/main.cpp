@@ -100,7 +100,7 @@ void FillContainer(List& container, int size) {
 
         case InputMethod::RANDOM:
             srand(time(0));
-            for (int i = 0; i < size; i++) {
+            for (int i = 0; i < size; ++i) {
                 container.pushBack(rand() % 100 - 50);
             }
             break;
@@ -111,7 +111,7 @@ void FillContainer(List& container, int size) {
                 cerr << "Не удалось открыть файл\n";
                 return;
             }
-            for (int i = 0; i < size && file >> value; i++) {
+            for (int i = 0; i < size && file >> value; ++i) {
                 container.pushBack(value);
             }
 
