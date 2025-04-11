@@ -25,26 +25,26 @@
 #define QUEUE_H
 
 class Queue {
-private:
-    struct Node {
-        int data;
-        Node* next;
-        Node(int val) : data(val), next(nullptr) {}
+    private:
+        struct Node {
+            int data;
+            Node* next;
+            Node(int val) : data(val), next(nullptr) {}
+        };
+    
+        Node* head;
+        Node* tail;
+
+    public:
+        Queue();
+        ~Queue();
+    
+        void push(int value);
+        bool pop(int& value);
+        void display() const;
+        void processUntilEven();
+        bool isEmpty() const;
+        void getHeadAndTailAddresses() const;
     };
-
-    Node* head;
-    Node* tail;
-
-public:
-    Queue();
-    ~Queue();
-
-    void push(int value);
-    bool pop(int& value);
-    void display() const;
-    void processUntilEven();
-    bool isEmpty() const;
-    void getHeadAndTailAddresses() const;
-};
 
 #endif // QUEUE_H
