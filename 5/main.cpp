@@ -133,7 +133,7 @@ int main() {
     setlocale(LC_ALL, "Russian");
 
     try {
-        int dequeSize, listSize;
+        int dequeSize = 1, listSize = 1;
 
         cout << "Введите размер дека (>= 5): ";
         while (!(cin >> dequeSize) || dequeSize < 5) {
@@ -149,8 +149,8 @@ int main() {
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
 
-        Deque dq;
-        List lst;
+        Deque dq = nullptr;
+        List lst = nullptr;
 
         cout << "\nЗаполнение дека:\n";
         FillContainer(dq, dequeSize);
