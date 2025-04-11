@@ -15,26 +15,26 @@
 #define LIST_H
 
 class DoublyLinkedList {
-private:
-    struct Node {
-        int value;
-        Node* prev;
-        Node* next;
-        Node(int val) : value(val), prev(nullptr), next(nullptr) {}
-    };
-
-    Node* head;
-    Node* tail;
-
-public:
-    DoublyLinkedList();
-    ~DoublyLinkedList();
-
-    void append(int value);
-    void display() const;
-    void printBetweenMinMax() const;
-    void clear();
-    bool isEmpty() const;
+    private:
+            struct Node {
+                int value;
+                Node* prev;
+                Node* next;
+                Node(int val) : value(val), prev(nullptr), next(nullptr) {}
+            };
+    
+            Node* head;
+            Node* tail;
+    
+    public:
+            DoublyLinkedList();
+            ~DoublyLinkedList();
+    
+            void Append(int value);
+            void Display() const;
+            void PrintBetweenMinMax() const;
+            void Clear();
+            bool IsEmpty() const;
 };
 
 #endif // LIST_H
