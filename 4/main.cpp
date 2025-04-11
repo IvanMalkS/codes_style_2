@@ -54,7 +54,7 @@ int GetInteger(const string& prompt) {
 int main() {
     setlocale(LC_ALL, "Russian");
 
-    DoublyLinkedList list = null;
+    DoublyLinkedList list = nullptr;
     try {
         int n = GetPositiveInteger("Введите количество элементов в списке: ");
 
