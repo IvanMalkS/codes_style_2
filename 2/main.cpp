@@ -64,7 +64,7 @@ int getInteger(const string& prompt) {
 int main() {
     setlocale(LC_ALL, "Russian");
 
-    Queue queue;
+    Queue queue = nullptr;
     try {
         int n = getPositiveInteger("Введите количество элементов очереди: ");
 
