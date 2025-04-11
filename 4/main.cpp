@@ -17,8 +17,8 @@
 
 using namespace std;
 
-int getPositiveInteger(const string& prompt) {
-    int value;
+int GetPositiveInteger(const string& prompt) {
+    int value = 0;
     while (true) {
         cout << prompt;
         cin >> value;
@@ -34,8 +34,8 @@ int getPositiveInteger(const string& prompt) {
     }
 }
 
-int getInteger(const string& prompt) {
-    int value;
+int GetInteger(const string& prompt) {
+    int value = 0;
     while (true) {
         cout << prompt;
         cin >> value;
@@ -54,21 +54,21 @@ int getInteger(const string& prompt) {
 int main() {
     setlocale(LC_ALL, "Russian");
 
-    DoublyLinkedList list;
+    DoublyLinkedList list = null;
     try {
-        int n = getPositiveInteger("Введите количество элементов в списке: ");
+        int n = GetPositiveInteger("Введите количество элементов в списке: ");
 
         cout << "Введите элементы списка:\n";
         for (int i = 0; i < n; ++i) {
             int value = getInteger("Элемент " + to_string(i+1) + ": ");
-            list.append(value);
+            list.Append(value);
         }
 
         cout << "\nСодержимое списка: ";
-        list.display();
+        list.Display();
 
         cout << "\nРезультат:\n";
-        list.printBetweenMinMax();
+        list.PrintBetweenMinMax();
 
     } catch (const exception& e) {
         cerr << "Ошибка: " << e.what() << endl;
