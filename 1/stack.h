@@ -24,25 +24,25 @@
 using namespace std;
 
 class Stack {
-public:
-    Stack();
-    ~Stack();
+    public:
+        Stack();
+        ~Stack();
+    
+        void push(int value);
+        void pop();
+        int top() const;
+        bool isEmpty() const;
+        void display() const;
 
-    void push(int value);
-    void pop();
-    int top() const;
-    bool isEmpty() const;
-    void display() const;
-
-private:
-    struct Node {
-        int data;
-        Node* next;
-        explicit Node(int value) : data(value), next(nullptr) {}
+    private:
+        struct Node {
+            int data;
+            Node* next;
+            explicit Node(int value) : data(value), next(nullptr) {}
+        };
+    
+        Node* topPtr;
+        int count;
     };
-
-    Node* topPtr;
-    int count;
-};
 
 #endif // STACK_H
