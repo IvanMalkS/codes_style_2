@@ -25,7 +25,7 @@ using namespace std;
 enum class InputMethod { KEYBOARD = 1, RANDOM, FILE_INPUT };
 
 void FillContainer(Deque& container, int size) {
-    int method, value;
+    int method = 2, value = 3;
     cout << "Выберите способ заполнения (1 - клавиатура, 2 - случайные числа, 3 - файл): ";
     while (!(cin >> method) || method < static_cast<int>(InputMethod::KEYBOARD) || method > static_cast<int>(InputMethod::FILE_INPUT)) {
         cerr << "Неверный метод ввода. Пожалуйста, введите 1, 2 или 3: ";
