@@ -23,6 +23,12 @@
 
 using namespace std;
 
+struct Node {
+    int data;
+    Node* next;
+    explicit Node(int value) : data(value), next(nullptr) {}
+};
+
 class Stack {
     public:
         Stack();
@@ -35,12 +41,6 @@ class Stack {
         void display() const;
 
     private:
-        struct Node {
-            int data;
-            Node* next;
-            explicit Node(int value) : data(value), next(nullptr) {}
-        };
-    
         Node* topPtr;
         int count;
     };
