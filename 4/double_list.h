@@ -14,15 +14,15 @@
 #ifndef LIST_H
 #define LIST_H
 
+struct Node {
+    int value;
+    Node* prev;
+    Node* next;
+    Node(int val) : value(val), prev(nullptr), next(nullptr) {}
+};
+
 class DoublyLinkedList {
     private:
-            struct Node {
-                int value;
-                Node* prev;
-                Node* next;
-                Node(int val) : value(val), prev(nullptr), next(nullptr) {}
-            };
-    
             Node* head;
             Node* tail;
     
